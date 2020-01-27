@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".SecondActivity">
 
+    <fragment
+        android:id="@+id/frangmentMenu2"
+        android:name="com.example.fragments_27_01.MenuFragment"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_menu" />
+
+    <LinearLayout
+        android:id="@+id/lyContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frangmentMenu2"></LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
