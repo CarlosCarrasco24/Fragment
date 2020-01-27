@@ -7,5 +7,14 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="botonMenu">
+        <item name="android:layout_width">@dimen/largo</item>
+        <item name="android:layout_height">@dimen/largo</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="imagenCentral">
+        <item name="android:layout_width">@dimen/maximo</item>
+        <item name="android:layout_height">@dimen/maximo</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
 </resources>
