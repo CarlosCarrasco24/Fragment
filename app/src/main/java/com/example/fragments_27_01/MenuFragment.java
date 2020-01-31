@@ -2,12 +2,10 @@ package com.example.fragments_27_01;
 
 
 import android.app.Activity;
+import android.hardware.camera2.CameraAccessException;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +36,27 @@ public class MenuFragment extends Fragment {
             boton=v.findViewById(botonesMenu[i]);
             if(i==botonPulsado){
                 boton.setImageResource(botonesIluminado[i]);
+            }
+            if(i==botonPulsado && i==1){
+
+                if(MainActivity.encendido){
+                    try {
+                        String cameraId = MainActivity.camManager.getCameraIdList()[0];
+                        MainActivity.camManager.setTorchMode(cameraId,true);
+                        MainActivity.encendido=false;
+                    }catch(CameraAccessException e){
+
+                    }
+                }else{
+                    try {
+                        String cameraId = MainActivity.camManager.getCameraIdList()[0];
+                        MainActivity.camManager.setTorchMode(cameraId,false);
+                        MainActivity.encendido=true;
+                    }catch(CameraAccessException e){
+
+                    }
+                }
+
             }
             final int indice=i;
             //pongo el listener a cada boton
